@@ -2,7 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from git import Repo, Git, Commit
 
-class BranchesAPIView(APIView):
+class BranchAPIView(APIView):
         
     def get(self, request, format=None, *args, **kwargs):
         print("BranchesAPIView.get")
@@ -14,9 +14,9 @@ class BranchesAPIView(APIView):
         remote_branches = []
         for this_branch in remote_repo.refs:
             remote_branches.append(this_branch.remote_head)
-        return Response({'branchActive': local_branch, 'branches': remote_branches})
+        return Response({'branch_active': local_branch, 'branches': remote_branches})
 
-class CommitsBranchAPIView(APIView):
+class CommitBranchAPIView(APIView):
 
     def get(self, request, branch, format=None):
         print("CommitsBranchAPIView.get")

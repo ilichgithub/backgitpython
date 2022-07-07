@@ -4,6 +4,6 @@ from .views import *
 app_name = 'prs'
 
 urlpatterns = [
-    path('prs', PullRequestAPIView.as_view()),
-    path('prs/update-partial/<int:pk>/', PullRequestUpdatePartialAPIView.as_view()),
+    path('', PullRequestAPIView.as_view()),
+    path('update-partial/<int:pk>/', PullRequestUpdatePartialAPIView.as_view()),
 ]

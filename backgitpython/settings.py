@@ -27,9 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 CORS_ORIGIN_WHITELIST = [
-    "http://127.0.0.1:3001", 
+    "http://127.0.0.1:3000", 
     "http://127.0.0.1", 
-    "http://localhost:3001", 
+    "http://localhost:3000", 
     "http://localhost"
 ]
 
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'prs',
+    'branch',
 ]
 
 MIDDLEWARE = [
