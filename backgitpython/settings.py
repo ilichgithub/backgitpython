@@ -91,7 +91,7 @@ DATABASES = {
         'NAME':'postgres',
         'USER':'postgres',
         'PASSWORD':'postgres',
-        'HOST':'gitpython1',
+        'HOST':'db-gitpython',
         'PORT':'5432',
     }
 }
