@@ -88,10 +88,10 @@ WSGI_APPLICATION = 'backgitpython.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'gitpython1',
-        'USER':'ilich',
-        'PASSWORD':'ilich',
-        'HOST':'localhost',
+        'NAME':'postgres',
+        'USER':'postgres',
+        'PASSWORD':'postgres',
+        'HOST':'gitpython1',
         'PORT':'5432',
     }
 }
