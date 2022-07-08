@@ -14,7 +14,10 @@ class BranchAPIView(APIView):
         remote_branches = []
         for this_branch in remote_repo.refs:
             remote_branches.append(this_branch.remote_head)
-        return Response({'branch_active': local_branch, 'branches': remote_branches})
+        return Response({
+            'branch_active': local_branch,
+            'branches': remote_branches
+            })
 
 class CommitBranchAPIView(APIView):
 
@@ -24,7 +27,9 @@ class CommitBranchAPIView(APIView):
         local_repo.git.checkout(branch)
         o = local_repo.remotes.origin
         o.pull()
-        commits = list(local_repo.iter_commits(local_repo.active_branch.name, max_count=100))
+        commits = list(local_repo.iter_commits(
+            local_repo.active_branch.name, max_count=100
+            ))
         commitsInfo = []
         for c in commits:
             commitsInfo.append({
